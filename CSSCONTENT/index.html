@@ -1,0 +1,963 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSSINTRO</title>
+    <style>
+        div,span{
+            background-color: grey;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to CSS.</h1>
+    <div>
+         Hey,from now I will start CSS.
+         Lets go.
+    </div>
+    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi nulla repudiandae doloremque mollitia quo. Optio vitae minima laudantium quaerat veritatis iure adipisci a culpa? Quisquam nemo aperiam voluptate veritatis laudantium?
+    </div>
+    <span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, fugiat sed doloremque itaque saepe nisi odio repellendus tenetur enim illum dolorum temporibus provident, et distinctio consequuntur sunt! Eligendi, alias fugit?
+    </span>
+</body>
+</html> -->
+
+
+<!--  Above div is the selecter and color is the declaration -->
+
+<!-- There are three types of css--
+Inline css--used with the help of style tag and used in html pages.tag k andr.
+
+Internal css--It means to add a style tag and place the html page's style within it.or ye alag se hote hai upr.esmei bulk edit kr skte hai eksath 100 g1 ho to ek baar mei krdo.tb use kro jb web page jyada bda nhi hai.
+
+External css--Ek .css file bnalo or usmei sb kro fir baad mei link kr do link likke ki mdad se.-->
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,ol,p{
+            color: black;
+            background-color: green;
+        }
+        body{
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:grey;">Three ways to add CSS to html</h1> -->
+    <!-- <h1>Three ways to add CSS to html</h1>
+    <div>
+        <ol>
+            <li>Inline CSS</li>
+            <li>Internal CSS</li>
+            <li>External CSS</li>
+        </ol>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel molestias soluta cupiditate iure exercitationem commodi earum odio nisi quia alias?</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- .red is a class Selecter -->
+<!-- #green is a id Selecter -->
+<!-- child Selecter -->
+<!-- descendent Selecter -->
+<!-- universal Selecter -->
+<!-- pseudo Selecter -->
+<!-- Attribute Selecter -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecters</title>
+    <style>
+         div{
+            background-color: red;
+        } 
+        .red {
+            background-color: red;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        div>p {
+            color: yellow;
+            background-color: brown;
+        }
+        div p {
+            color: yellow;
+            background-color: brown;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a:visited{
+            color: red;
+        }
+        a:link{
+            color: green;
+        }
+        a:active{
+           background-color:brown;
+        }
+        a:hover{
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">I am a div.
+        <article>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, iusto.
+        </p>
+        </article>
+    </div>
+    <div id="green">I am a another div</div>
+    <a href="https://www.google.com">Go To Google</a>
+    <a href="https://www.Facebook.com">Go To Facebook</a>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+<!-- box model --margin border padding-->
+
+
+<!-- margin collaps- agr do elements ki margin overlap ho rhi hai to jo max margin hai vo bs ekk baar lgegi or show kregi-->
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS Box model</title>
+    <style>
+        .box{
+            background-color: grey;
+        }
+        .box1{
+            color: black;
+            padding: 10px;
+            margin: 25px;
+            border: 15px solid black;
+            height: 20px;
+            /* box-sizing: border-box; */
+        }
+        .box2{
+            color: aqua;
+            padding: 10px;
+            margin: 25px;
+            border: 15px solid black;
+            height: 20px;
+            /* box-sizing: border-box; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">I am first</div>
+    <div class="box box2">I am second</div>
+</body>
+</html> -->
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts Text and Color</title>
+    <style>
+        p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-weight: 600;
+            text-decoration: underline;
+            /* text-align: center; */
+            line-height: 5;
+            text-decoration-color: blue;
+            text-decoration-style:solid;
+            text-decoration-thickness: 5px;
+        }
+        h1{
+            text-align: center;
+            letter-spacing: 3px;
+            text-transform: capitalize;
+            text-transform: uppercase;
+        }
+        h2{
+            text-decoration: underline;
+            text-decoration-color: blue;
+            text-decoration-style:solid;
+            text-decoration-thickness: 5px;
+            text-overflow: ellipsis;
+        }
+        .lorem{
+            border: 2px solid red;
+            width: 40px;
+            text-overflow:ellipsis;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>fonts</h1>
+        <h2>About fonts</h2>
+        <p>This is the video on fonts text and color.</p>
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil tempora maxime consequatur minima reiciendis perferendis!
+        </p>
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise1</title>
+    <style>
+        div p:first-child{
+            background-color: white;
+            color: black;
+            text-align: center;
+        }
+        div>p{
+            text-align: center;
+        }
+        body {
+            background-color: grey;
+        }
+
+        h1{
+            text-align: center;
+            text-transform: capitalize;
+            text-decoration: underline;
+        }
+        h3{
+            text-align: center;
+            text-transform: capitalize;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercise 1 for CSS</h1>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minima corporis quae veritatis consectetur voluptate, natus quidem sunt aliquam maxime alias veniam laudantium recusandae earum deleniti explicabo laborum deserunt harum sint sed dolores, culpa eum facere labore. Eius repudiandae cum impedit quam quisquam, recusandae, nesciunt quaerat facere, ab non qui!</p>
+        <h3>Second para</h3></p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur et tempore praesentium odit temporibus provident. Magni quod reiciendis explicabo commodi, maiores aliquam hic voluptates ratione expedita sequi non dolores minus. Libero, repellat, nihil laboriosam cumque officiis eum consequuntur perferendis corporis ipsum iste modi, officia est.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minima corporis quae veritatis consectetur voluptate, natus quidem sunt aliquam maxime alias veniam laudantium recusandae earum deleniti explicabo laborum deserunt harum sint sed dolores, culpa eum facere labore. Eius repudiandae cum impedit quam quisquam, recusandae, nesciunt quaerat facere, ab non qui!</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur et tempore praesentium odit temporibus provident. Magni quod reiciendis explicabo commodi, maiores aliquam hic voluptates ratione expedita sequi non dolores minus. Libero, repellat, nihil laboriosam cumque officiis eum consequuntur perferendis corporis ipsum iste modi, officia est.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minima corporis quae veritatis consectetur voluptate, natus quidem sunt aliquam maxime alias veniam laudantium recusandae earum deleniti explicabo laborum deserunt harum sint sed dolores, culpa eum facere labore. Eius repudiandae cum impedit quam quisquam, recusandae, nesciunt quaerat facere, ab non qui!</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur et tempore praesentium odit temporibus provident. Magni quod reiciendis explicabo commodi, maiores aliquam hic voluptates ratione expedita sequi non dolores minus. Libero, repellat, nihil laboriosam cumque officiis eum consequuntur perferendis corporis ipsum iste modi, officia est.p>
+      
+    </div>
+</body>
+</html> -->
+
+
+
+
+<!-- 
+
+Specificity -agr do selecters same condition de rhe hai to knsa apply hoga ye hme specificity batata hai. esmei ek cascade algo hoti hai jo decide kregi priority. sbse jyada important lga uski hoti hai priority uske baad inline ki fir id fir class ki fir elements selecters ki  uske baad universal selecters ki -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        h1{
+            color: aqua;
+        }
+        .yellow{
+            color: yellow;
+        }
+        .cred{
+            color: red;
+        }
+        .cpurple{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="yellow cred cpurple">CSS Specificity</h1>
+    </div>
+</body>
+</html> -->
+
+
+
+
+<!-- size Units- pixels,viewport width -->
+<!-- font size-rem,em,vmin,vmax -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Units</title>
+    <style>
+        .red,.container{
+            /* width: 233px; */
+            /* width: 23vw; */
+            background-color: aqua;
+            color: black;
+            border: 2px solid yellowgreen;
+            box-sizing:border-box;
+            margin: 23px auto;
+            font-size: 20px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="red"> This is css</div>
+    <div class="container">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga perspiciatis quia harum praesentium expedita neque modi error, nobis pariatur ab dolore ullam rem asperiores. Reiciendis nobis tempore suscipit corrupti, vero quae perspiciatis facilis cumque praesentium quisquam, architecto illo? Perferendis dolorum placeat saepe impedit, perspiciatis maxime illo dolores accusantium excepturi itaque qui magnam facilis voluptatum sit incidunt.</div>
+</body>
+</html> -->
+
+
+
+
+
+<!-- display properties -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid blue;
+            display:inline-block;
+            padding: 45px;
+            margin: 34px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">I am a student</div>
+    <div class="box">and i m good</div>
+    <span>i m a good</span>
+    <span>student</span>
+</body>
+</html> -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Outlines</title>
+    <style>
+        .box{
+            border: 2px solid blue;
+            padding:34px ;
+            box-shadow: 5px 5px 5px inset aqua;
+        }
+        p{
+            text-shadow: 2px 2px 4px red;
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">i m a box</div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, quos inventore sunt obcaecati sint totam a molestias quo. Iure, aspernatur veritatis quisquam amet totam nisi nemo, tempora iusto qui vero, consectetur velit voluptatibus quam cupiditate.</p>
+</body>
+</html> -->
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Style</title>
+    <style>
+        nav ul{
+            padding: 0px;
+            margin: 0;
+            display: flex;
+            list-style: none;
+        }
+        li{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html> -->
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .box{
+            width: 30vw;
+            height: 10vw;
+            border: 2px solid black;
+            overflow:scroll;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ducimus quam doloribus nostrum natus sapiente quas dolorum corrupti vero officiis est optio eum iusto incidunt, maxime inventore earum blanditiis quidem, tempore ut consectetur numquam, porro possimus soluta! Velit et voluptatibus explicabo accusamus eaque optio voluptas dolor quam. Temporibus, natus ab.
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+
+
+           Exception-- transform,filter,prospecctive properties can also make an element appear as positional
+
+        }
+        .box{
+            height: 120vw;
+            width: 100vw;
+            border: 2px solid black;
+            margin: 5px;
+            filter: invert(0);
+        }
+        .box1{
+            background-color: aliceblue;
+            position: sticky;
+            top: 0px;
+            height: 100px;
+            width: 100%;
+            margin: 10;padding: 10;
+        }
+        .box2{
+            background-color: antiquewhite;
+            /* position: relative; */
+            /* top: 10px;
+            bottom: 20px;
+            right: 20px;
+            left: 30px; */
+            /* z-index: 1; */
+        }
+        .box3{
+            background-color: bisque;
+        }
+        .box4{
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- root k andr jo bhi hota hai global variable hota hai.ye do type k hote hai local variable or global variable.variables k ye use hota hai ki hum usse ek baar mei color change kr skte hai  -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <style>
+        :root{
+            --color:bisque;
+            --secolor:lightblue;
+            --defpad:20px;
+            --defop:0.2px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            background-color: var(--color);
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            /* gap: 5px; */
+            
+        }
+        li{
+            padding: 10px;
+            /* margin: 10px; */
+            border: 2px solid var(--secolor);
+        }
+        ul li:first-child{
+            --color:brown;
+            background-color: var(--color);
+        }
+        .container{
+            background-color: var(--secolor);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        <div class="container">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum facilis nobis dolorem praesentium dolores, obcaecati laboriosam expedita unde. Veritatis, optio aliquid! Recusandae quo, unde dignissimos magnam non autem fugit a nisi qui possimus modi quasi ex inventore quidem fugiat neque molestias ducimus voluptas optio ipsam.</div>
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- media query website ko responsive bnati hai -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media query</title>
+    <style>
+        body{
+            background-color: red;
+        }
+        @media only screen and (max-width:45px){
+            body{
+                background-color: blue;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+        @media screen and (orientation: landscape) {
+            body{
+                border:2px solid green;
+            }
+        }
+        .boxes{
+            display: flex;
+        }
+        .box{
+            height: 344px;
+            width: 344px;
+            background-color: yellow;
+            padding: 3px;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+</html> -->
+
+
+<!-- clear mei ye hota hai ki koi bhi element float n kre -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Clear</title>
+    <style>
+        img{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwb24lMjBtb3VudGFpbnxlbnwwfHwwfHx8MA%3D%3D" alt="" width="230px">
+        <div class="card">Card1</div>
+        <div class="card">Card2</div>
+        <div class="card">Card3</div>
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+<!-- Flexbox-content ko align krna easy hota hai(centre,left,right,top,bottom)-->
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container{
+            border:2px solid red;
+            display: flex;
+            height: 80vh;
+            /* justify se centre ho jynge flex direction ko deeke main axis mei krega centre */
+            justify-content: center;
+            /* align items centre vertically centre ho jynge or use tb krnge jb ek line hogi.multiple k liye align content use krnge  */
+            align-items: center;
+            /* simat dega overflow nhi hoga */
+            /* flex-wrap: wrap; */
+            /* 2 alg lg line ko centre pe le ayga */
+            /* align-content: center; */
+            gap: 40px 20px ;
+        }
+        .item{
+            height: 32px;
+            width: 32px;
+            background-color: violet;
+            border: 2px solid black;
+            margin: 4px;
+            /* display: inline-block; */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html> -->
+
+
+
+
+<!-- grid line jo lines hoti hai or grid cell ek box hota hai -->
+<!-- grid track - do grid lines k beech mei space  or grid area - kisi bhi 2 line k beech k area  -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: 120px 100px;
+            grid-template-rows: 100px 100px 100px;
+        }
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+            margin: 10px;
+        }
+        .item4{
+            grid-row:1/2;
+            grid-column: 1/2;
+        }
+        .item1{
+            grid-row:1/2;
+            grid-column: 1/2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforms</title>
+    <style>
+        .container{
+            height:80vw;
+            width: 100vw;
+            border: 2px solid red;   
+        }
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: beige;
+            border: 2px solid black;
+            font-size: large;
+             /* display: flex; */
+            justify-content: center; 
+            align-items: center;
+            /* text-align: center; */
+            margin: 10px;
+            /* transform: rotate(45deg); */
+            /* transform:skew(5deg) */
+            transform: translateX(300px) skewX(40deg) translateY(20px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box</div>
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .container{
+            background-color: red;
+            width: 50vw;
+            height: 40vh;
+        }
+        .box{
+            background-color: aquamarine;
+            width: 5vw;
+            height: 4vh;
+            border: 2px solid black;
+            transition-property: transform;
+            transition-duration: 10s;
+            transition-timing-function:ease-in-out ;
+            transition-delay: 10s;
+            /* transition: transform 10s ease-in-out 5s; */
+        }
+        .translate{
+            transform: translateX(10vw) translateY(10vh);
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+</body>
+</html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        .container{
+            background-color: aquamarine;
+            height: 80vh;
+            width: 30vw;
+        }
+        .box{
+            background-color: brown;
+            height: 45px;
+            width: 34px;
+            margin: 5px;
+            border:2px solid black;
+            position: relative;
+            top: 2px;
+            animation: akshitkaanimation;
+            animation-duration: 1s;
+            animation-timing-function:ease-out;
+            animation-delay: 0s;
+            animation-iteration-count: 10;
+            animation-direction:alternate;
+
+        }
+        @keyframes akshitkaanimation {
+            from{
+
+            }
+            to{
+                transform: translateX(190px) translateY(190px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box</div>
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object fit Cover fit</title>
+    <style>
+        .container{
+            height: 488px;
+            width: 600px;
+            border: 2px solid black;
+            background-color: antiquewhite;
+        }
+        img{
+            height: 488px;
+            width: 580px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="download (1).jpeg" alt="">
+    </div>
+</body>
+</html> -->
+
+
+
+
+
