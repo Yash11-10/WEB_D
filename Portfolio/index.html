@@ -1,0 +1,775 @@
+<script
+  src="https://kit.fontawesome.com/5d8dc268fd.js"
+  crossorigin="anonymous"
+></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal-portfolio</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script>
+      emailjs.init({ publicKey: "X37gNeuwnmXKtcvRk" }); // Replace with your EmailJS public key
+    </script>
+    <link rel="icon" type="image/png" href="images/favicon_io/favicon.ico" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: black;
+        color: white;
+      }
+
+      #header {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .separation {
+        height: 2px;
+        background-color: gray;
+      }
+
+      .container {
+        padding: 10px 10%;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      nav h2 span {
+        color: #db2f2f;
+      }
+
+      nav ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .photo {
+        width: 44%;
+        height: 90vh;
+        position: absolute;
+        left: 55%;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        text-decoration-color: #db2f2f;
+        font-size: medium;
+        transition: 0.5s;
+      }
+
+      .header-text {
+        margin-top: 20%;
+        font-size: 30px;
+        position: relative;
+      }
+
+      .header-text h1 {
+        font-size: 60px;
+        margin-top: 20px;
+      }
+
+      .header-text h1 span {
+        color: #db2f2f;
+      }
+
+      .header-text p {
+        font-size: 30px;
+      }
+
+      /* <!--------------------------------------------------------------------------about------------------------------------------------------------------------------> */
+      #about {
+        padding: 20px 0px;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .about-col-1 {
+        flex-basis: 35%;
+      }
+
+      .about-col-2 {
+        flex-basis: 60%;
+        font-size: 24px;
+        /* padding: 60px ; */
+      }
+
+      .about-col-1 img {
+        filter: brightness(90%);
+        width: 100%;
+        border-radius: 50px;
+      }
+
+      /* .about-me {
+        font-size: 50px;
+        /* text-decoration: underline; */
+      /* } * */
+
+      .tab-titles {
+        display: flex;
+        margin: 20px 0px 40px;
+      }
+
+      .tab-links {
+        margin-right: 50px;
+        font-size: 18px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .tab-links::after {
+        content: "";
+        width: 0px;
+        height: 3px;
+        background: #db2f2f;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: 0.5s;
+      }
+
+      .tab-links.active-link::after {
+        width: 55px;
+      }
+
+      .tab-details ul li {
+        list-style: none;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+
+      .tab-details ul li span {
+        color: #db2f2f;
+        font-size: 15px;
+      }
+
+      .tab-details {
+        display: none;
+      }
+
+      .tab-details.active-tab {
+        display: block;
+      }
+
+      /* <!------------------------------------------------------------------services------------------------------------------------------------------------------> */
+      #services {
+        padding: 30px 0;
+      }
+      /* .my-services {
+        font-size: 50px;
+      } */
+      .service-List {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        margin-top: 50px;
+      }
+      .service-List .card {
+        background: #262626;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 300;
+        border-radius: 10px;
+        transition: transform 0.5s;
+      }
+      .card h2 {
+        margin-bottom: 15px;
+      }
+
+      .card p {
+        margin-bottom: 12px;
+      }
+      .card i {
+        margin-bottom: 12px;
+        font-size: 30px;
+      }
+
+      .card a {
+        display: inline-block;
+        margin-top: 8px;
+        color: white;
+        text-decoration: none;
+      }
+      .service-List .card:hover {
+        background: #db2f2f;
+        transform: translateY(-10px);
+      }
+      /* <!------------------------------------------------------------------services------------------------------------------------------------------------------> */
+      #portfolio {
+        padding: 50px 0;
+      }
+      .sub-title {
+        font-size: 50px;
+      }
+      .worklist {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        margin-top: 50px;
+      }
+      .work {
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+      }
+      .work img {
+        width: 100%;
+        border-radius: 10px;
+        /* display: block; */
+        transition: transform 0.5s;
+      }
+      .layer {
+        width: 100%;
+        height: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), #f50505);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        font-size: 14px;
+        transition: height 1s;
+      }
+      .layer h3 {
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      .layer a i {
+        margin-top: 20px;
+        color: #ff004f;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 60px;
+        background: #fff;
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        text-align: center;
+      }
+      .work:hover .layer {
+        height: 100%;
+      }
+      .work:hover img {
+        transform: scale(1.1);
+      }
+      .btn {
+        display: block;
+        margin: 50px auto;
+        width: fit-content;
+        border: 1px solid #db2f2f;
+        padding: 14px 50px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: white;
+        transition: background 0.5s;
+      }
+      .btn:hover {
+        background: #db2f2f;
+      }
+      /* <!-- --------------------------------------------------------------------------contact----------------------------------------------------------------------------> */
+
+      .contact-left {
+        flex-basis: 35%;
+      }
+      .contact-right {
+        flex-basis: 60%;
+      }
+      .contact-left p {
+        margin-top: 30px;
+      }
+      .contact-left p i {
+        color: #db2f2f;
+        margin-right: 15px;
+        font-size: 25px;
+      }
+      .social-icons {
+        margin-top: 30px;
+      }
+      .social-icons a {
+        text-decoration: none;
+        font-size: 30px;
+        margin-right: 15px;
+        color: #ababab;
+        display: inline-block;
+        transition: transform 0.5s;
+      }
+      .social-icons a:hover {
+        color: #db2f2f;
+        transform: translateY(-5px);
+      }
+      .btn.btn2 {
+        display: inline-block;
+        text-decoration: none;
+        background: #db2f2f;
+      }
+      .contact-right form {
+        width: 100%;
+      }
+      form input,
+      form textarea {
+        width: 100%;
+        border: 0;
+        outline: none;
+        background: #2f2e2e;
+        padding: 15px;
+        margin: 15px 0;
+        color: #ffff;
+        font-size: 18px;
+        border-radius: 6px;
+      }
+      form .btn2 {
+        padding: 14px 60px;
+        font-size: 18px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      .copyright {
+        width: 100%;
+        text-align: center;
+        padding: 25px 0;
+        background: #262626;
+        font-weight: 300;
+        margin-top: 20px;
+      }
+      nav .open,
+      .close {
+        display: none;
+      }
+
+      /*----------------------------------------------- responsive-------------------------------------*/
+      @media only screen and (max-width: 600px) {
+        .header-text {
+          margin-top: 100%;
+          font-size: 16px;
+        }
+        .header-text h1 {
+          font-size: 30px;
+        }
+        nav .open,
+        .close {
+          display: block;
+          font-size: 25px;
+        }
+        nav ul {
+          background: #db2f2f;
+          position: fixed;
+          top: 0;
+          right: -200px;
+          width: 200px;
+          height: 100vh;
+          padding-top: 50px;
+          z-index: 2;
+          transition: right 0.8s;
+        }
+        nav ul li {
+          display: block;
+          margin: 25px;
+        }
+        nav ul .open {
+          position: absolute;
+          top: 25px;
+          left: 25px;
+          cursor: pointer;
+        }
+        .sub-title {
+          font-size: 40px;
+        }
+        .about-col-1,
+        .about-col-2 {
+          flex-basis: 100%;
+        }
+        .about-col-1 {
+          margin-bottom: 30px;
+        }
+        .about-col-2 {
+          text-align: center;
+          font-size: 20px;
+        }
+        .contact-left,
+        .contact-right {
+          flex-basis: 100%;
+          margin-top: 20px;
+        }
+        .copyright {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <h2><span>A</span>kshit Saxena</h2>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i
+              class="fa-regular fa-circle-xmark open"
+              onclick="closemenu()"
+            ></i>
+          </ul>
+          <i class="fa-solid fa-list close" onclick="openmenu()"></i>
+        </nav>
+        <img src="images/home.png" class="photo" />
+        <div class="header-text">
+          <p>Software developer</p>
+          <h1>Hi,I'm <span>Akshit</span> <br />Saxena From India.</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="separation"></div>
+
+    <!----------------------------------------------------------------------------About--------------------------------------------------------------------------------->
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/home1.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p class="about">
+              I am an aspiring developer with a strong interest in building
+              meaningful and impactful digital experiences. I am continuously
+              learning and improving my problem-solving abilities through
+              consistent practice. I enjoy exploring new ideas and turning them
+              into practical solutions. I am a quick learner who believes in
+              growth through dedication and real-world experience. I value clean
+              work, attention to detail, and continuous self-improvement. My
+              goal is to grow professionally and contribute to projects that
+              create real value.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-details active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Programming & Development</span><br />Java <br />HTML:5
+                  <br />CSS , Tailwind CSS<br />JavaScript , React Js
+                </li>
+                <li>
+                  <span>Problem Solving</span><br />Data Structures & Algorithms
+                  (Basics) <br />
+                  Logical Thinking
+                </li>
+                <li><span>Tools</span><br />Git & GitHub <br />VS Code</li>
+              </ul>
+            </div>
+            <div class="tab-details" id="experience">
+              <ul>
+                <li>
+                  <span>Jovac'25</span><br />Full Stack Program at W3 grades.
+                </li>
+                <li>
+                  <span>CODEC Technologies</span><br />Intern as MERN Stack
+                  Developer
+                </li>
+                <!-- <li><span>2018-2019</span><br />Intership at Cisco</li> -->
+              </ul>
+            </div>
+            <div class="tab-details" id="education">
+              <ul>
+                <li><span>2023-2027</span><br />B-Tech from GLA , Mathura</li>
+                <li>
+                  <span>2022-2023</span><br />Intermediate from Mother Athena
+                  School , Badaun
+                </li>
+                <li>
+                  <span>2020-2021</span><br />High School from Mother Athena
+                  School , Badaun
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="separation"></div>
+
+    <!-- ------------------------------------------------------------------------------Services-------------------------------------------------------------------------- -->
+
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="service-List">
+          <div class="card">
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Development</h2>
+            <p>
+              Simple and responsive websites using modern web standards. I focus
+              on clean layout, proper structure, and user-friendly design.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>Bug Fixing & Improvements</h2>
+            <p>
+              Identifying and fixing basic issues in websites and improving
+              performance and layout
+              <a href="#">Learn more</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <i class="fa-brands fa-app-store"></i>
+            <h2>Problem Solving & Logical Thinking</h2>
+            <p>
+              Helping in solving basic logical and programming problems by
+              breaking them into smaller steps and finding simple solutions.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separation"></div>
+
+    <!-- --------------------------------------------------------------------------Portfolio-------------------------------------------------------------------------- -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="worklist">
+          <div class="work">
+            <img src="images/BDvqkcvVLHBu6xZ5yaN7jQ.jpg" />
+            <div class="layer">
+              <h3>Netflix Clone (Responsive Website)</h3>
+              <p>
+                Developed a fully responsive Netflix clone as my first major
+                project. The project focuses on layout design, responsiveness,
+                and recreating the overall user interface experience. This
+                project helped me understand website structure, responsiveness,
+                and UI consistency across devices.
+                <a href="https://github.com/Akshit11-10/Netflix-Clone"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/logo_template_img_16662566699592.png" />
+            <div class="layer">
+              <h3>KickVibe – Full Stack Web Application</h3>
+              <p>
+                Built a complete MERN stack web application named KickVibe. The
+                project includes frontend, backend, and database integration,
+                making it a fully functional website. This project helped me
+                gain practical experience in building and managing a complete
+                web application from start to finish.
+              </p>
+              <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/160751219942373.Y3JvcCw0MzExLDMzNzIsNDI2LDA.png" />
+            <div class="layer">
+              <h3>Personal-portfolio</h3>
+              <p>
+                Designed and developed my personal portfolio website to showcase
+                my skills, projects, and experience. The website is fully
+                responsive and works smoothly across mobile, tablet, and desktop
+                devices, focusing on clean design and user-friendly layout.
+              </p>
+              <a href="https://github.com/Akshit11-10/Akshit-Portfolio"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <a
+          href="https://www.linkedin.com/in/akshit-saxena-231502303?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+          class="btn"
+          >See more</a
+        >
+      </div>
+    </div>
+
+    <div class="separation"></div>
+    <!-- --------------------------------------------------------------------------Contact-------------------------------------------------------------------------- -->
+
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>
+              <i class="fa-solid fa-message"></i>akshatsaxena102005@gmail.com
+            </p>
+            <p><i class="fa-solid fa-phone"></i>6397645969</p>
+            <div class="social-icons">
+              <!-- <a href=""><i class="fa-brands fa-facebook"></i></a> -->
+              <a href="https://www.instagram.com/Akshit11_10/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/akshit-saxena-231502303?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://x.com/AkshatS60753653"
+                ><i class="fa-brands fa-twitter-square"></i
+              ></a>
+            </div>
+            <a href="images/GLAResumeFormat (3).pdf" download class="btn btn2"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form id="contactForm">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright &copy; Akshit. Made by Akshit Saxena</p>
+      </div>
+    </div>
+
+    <script>
+      // Tabs
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabdetails = document.getElementsByClassName("tab-details");
+      function opentab(tabname) {
+        for (tablink of tablinks) tablink.classList.remove("active-link");
+        for (tabdetail of tabdetails) tabdetail.classList.remove("active-tab");
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+
+      // Side Menu
+      var sidemenu = document.getElementById("sidemenu");
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+
+      document.getElementById(".btn2").addEventListener("click", function () {
+        this.classList.add("transparent");
+      });
+    </script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        serverTimestamp,
+      } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyD33AtZGOySAkEXGYf_0J7e11eRIyNGG5Y",
+        authDomain: "akshit-portfolio-7ddef.firebaseapp.com",
+        projectId: "akshit-portfolio-7ddef",
+        storageBucket: "akshit-portfolio-7ddef.firebasestorage.app",
+        messagingSenderId: "506587298600",
+        appId: "1:506587298600:web:c7eb864e6292338b6a2e1d",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      const form = document.getElementById("contactForm");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = form.Name.value;
+        const email = form.email.value;
+        const message = form.Message.value;
+
+        try {
+          // 1️⃣ Save to Firestore
+          await addDoc(collection(db, "contacts"), {
+            name,
+            email,
+            message,
+            createdAt: serverTimestamp(),
+          });
+
+          // 2️⃣ Send Email via EmailJS
+          await emailjs.send(
+            "service_dqxmn4v",
+            "template_l5flm9g", // ← Replace with your EmailJS template ID
+            { from_name: name, from_email: email, message: message }
+          );
+
+          alert("Message sent successfully ✅");
+          form.reset();
+        } catch (err) {
+          console.error(err);
+          alert("Error ❌");
+        }
+      });
+    </script>
+  </body>
+</html>

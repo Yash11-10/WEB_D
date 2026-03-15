@@ -1,0 +1,43 @@
+/* <!--ye sare html elements or tag k sare bystyle hta deti hai ex-h1 tag--> */
+@tailwind base;
+
+
+@tailwind components;
+
+/* all classes like bg margin padding and many more comes under this */
+@tailwind utilities;
+
+
+
+/* we can modify elements */
+/* @layer base{
+    h1{
+        font-size:50px;
+    }
+} */
+/* @layer base{
+    h2{
+        font-size:40px;
+    }
+} */
+/* @layer base{
+    h3{
+        font-size:30px;
+    }
+} */
+
+/* @layer base{
+    h1{
+        @apply text-8xl;
+    }
+} */
+/* @layer base{
+    h2{
+        @apply text-4xl;
+    }
+} */
+/* @layer base{
+    h1{
+        @apply text-2xl;
+    }
+} */
