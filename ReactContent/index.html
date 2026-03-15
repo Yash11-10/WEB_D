@@ -1,0 +1,90 @@
+<!-- React is a JavaScript library (not a language) created by Facebook (Meta).
+
+It helps you build user interfaces (UI) for websites and web apps.
+
+Think of it as a toolbox that makes building modern websites easier, faster, and cleaner.
+
+
+You can break the UI into small reusable pieces called Components.
+Example: Button, Navbar, Card → all can be separate components.
+
+Only the changed part of the page updates automatically (thanks to the Virtual DOM).
+
+Makes your website/app super fast and organized.
+
+Used in real-world apps like Instagram, Facebook, Netflix, WhatsApp Web. -->
+
+
+<!-- node modukles k andr sare packages hote hai jo hmne download kre hai -->
+<!-- public k andr vo cheezen hoti hai jinhe hm direct access kr skte hai  -->
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title> 
+</head>
+<body>
+    <div id="counter">0</div>
+    <button id="btn">Click me</button>
+    <script>
+        document.getElementById("btn").addEventListener("click",()=>{
+            let num = parseInt(document.getElementById("counter").innerHTML);
+            document.getElementById("counter").innerHTML = num + 1;
+        })
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* upar-niche layout */
+            align-items: center;
+            /* horizontally center elements inside */
+            background-color: red;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="counter">0</div>
+        <button id="btn">Click Here</button>
+    </div>
+    <script>
+        document.getElementById("btn").addEventListener("click", () => {
+            let num = parseInt(document.getElementById("counter").innerHTML)
+            document.getElementById("counter").innerHTML = num + 1;
+        })
+    </script>
+
+</body>
+
+</html>
