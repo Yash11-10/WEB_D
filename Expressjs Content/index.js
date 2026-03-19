@@ -61,7 +61,7 @@
 
 
 
-// render html elements and forms 🔽
+// connect html elements and forms 🔽
 
 // import express from 'express'
 // import home from './pages/home.js'
@@ -82,14 +82,13 @@
 
 // vdo 29
 
-// render html file 
+// connect html file 
 
-
-import express from 'express'
-import path from 'path'
-const app = express()
-app.get("/",(req,res)=>{
-    const abspath = path.resolve('html/home.html')
-    res.sendFile(abspath)
-})
-app.listen(3200);
+// import express from 'express'
+// import path from 'path'
+// const app = express()
+// app.get("/",(req,res)=>{
+//     const abspath = path.resolve('html/home.html')
+//     res.sendFile(abspath)
+// })
+// app.listen(3200);

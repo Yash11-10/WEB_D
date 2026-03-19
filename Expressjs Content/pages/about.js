@@ -1,3 +1,3 @@
 export default function about(){
-    return "<h1>Welcome to About page</h1>"
+    return "<h1>About page</h1><a href='login'>Go to login page</a>"
 }
