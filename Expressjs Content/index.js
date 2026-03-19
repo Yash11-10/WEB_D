@@ -47,14 +47,49 @@
 // const express = require('express'); //this is vanilla js k syntax and this is old way to use
 // yhn hum dusri file se connect kr rhe hai, function vobhi
 // ecma script k use esliye nhi kr skte kyki package json mei type common js hota hai vo use krne k ;iye module krna pdega type 
-import express from "express"; // this is Ecmascript syntax. or ye tb chlega jb package json mei tume type mei module kroge commmon js ki jgy
-import home from "./pages/home.js";
-import about from "./pages/about.js";
-const app = express();
-app.get("", (req, res) => {
-  res.send(home());
-});
-app.get("/about", (req, res) => {
-  res.send(about());
-});
-app.listen(3400);
+// import express from "express"; // this is Ecmascript syntax. or ye tb chlega jb package json mei tume type mei module kroge commmon js ki jgy
+// import home from "./pages/home.js";
+// import about from "./pages/about.js";
+// const app = express();
+// app.get("", (req, res) => {
+//   res.send(home());
+// });
+// app.get("/about", (req, res) => {
+//   res.send(about());
+// });
+// app.listen(3400);
+
+
+
+// render html elements and forms 🔽
+
+// import express from 'express'
+// import home from './pages/home.js'
+// import login from './pages/login.js'
+// import submit from './pages/submit.js'
+// const app = express()
+// app.get("", (req,res)=>{
+//     res.send(home());
+// })
+// app.get("/login", (req,res)=>{
+//     res.send(login());
+// })
+// app.post("/submit", (req,res)=>{
+//     res.send(submit());
+// })
+// app.listen(3400);
+
+
+// vdo 29
+
+// render html file 
+
+
+import express from 'express'
+import path from 'path'
+const app = express()
+app.get("/",(req,res)=>{
+    const abspath = path.resolve('html/home.html')
+    res.sendFile(abspath)
+})
+app.listen(3200);
