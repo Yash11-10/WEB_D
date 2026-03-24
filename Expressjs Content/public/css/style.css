@@ -1,4 +1,4 @@
-h2 {
+/* h2 {
     color: sandybrown;
 }
 
@@ -8,4 +8,8 @@ a {
     margin: 20px;
     background-color: aqua;
     color: black;
+} */
+button{
+    background-color: brown;
+    color: wheat;
 }
