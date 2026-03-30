@@ -11,8 +11,6 @@
 // });
 // app.listen(3400);
 
-
-
 // const express = require('express');
 // const app = express();
 // app.get("", (req,res)=>{
@@ -22,8 +20,6 @@
 
 // we cam write either in above way or bellow way
 // const express = require('express')()
-
-
 
 // server🔽
 // app k andr sb hota hai server sare put patch dlt .
@@ -42,11 +38,9 @@
 // })
 // app.listen(3200);
 
-
-
 // const express = require('express'); //this is vanilla js k syntax and this is old way to use
 // yhn hum dusri file se connect kr rhe hai, function vobhi
-// ecma script k use esliye nhi kr skte kyki package json mei type common js hota hai vo use krne k ;iye module krna pdega type 
+// ecma script k use esliye nhi kr skte kyki package json mei type common js hota hai vo use krne k ;iye module krna pdega type
 // import express from "express"; // this is Ecmascript syntax. or ye tb chlega jb package json mei tume type mei module kroge commmon js ki jgy
 // import home from "./pages/home.js";
 // import about from "./pages/about.js";
@@ -58,8 +52,6 @@
 //   res.send(about());
 // });
 // app.listen(3400);
-
-
 
 // connect html elements and forms 🔽
 
@@ -79,10 +71,9 @@
 // })
 // app.listen(3400);
 
-
 // vdo 29
 
-// connect html file 
+// connect html file
 
 // import express from 'express'
 // import path from 'path'
@@ -92,3 +83,29 @@
 //     res.sendFile(abspath)
 // })
 // app.listen(3200);
+
+// after MVC ARCHITECTURE -------------------------------------------
+// vdo Number 42
+
+// dynamic routes
+// 👉 “Dynamic routes are routes that accept parameters and generate responses based on those parameters.” z
+
+import express from "express";
+const app = express();
+app.get("/", (req, res) => {
+  const users = ["harsh", "yash", "raj", "shivam"];
+  let data = "<ul>";
+  for (let i = 0; i < users.length; i++) {
+    data += `<li><a href="user/${users[i]}">${users[i]}</a></li>`;
+    // console.log(users[i]);
+  }
+  data += "</ul>";
+  res.send(data);
+});
+app.get("/user/:name", (req, res) => {
+  console.log(req.params.name);
+  const userName = req.params.name;
+  const capitalName = userName.charAt(0).toUpperCase() + userName.slice(1);
+  res.send(`This is ${capitalName}'s Profile`);
+});
+app.listen(3400);
