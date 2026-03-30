@@ -15,7 +15,7 @@
 //     res.end();
 // }).listen(3200)
 
-//get the data of form (form.html) with here (js file).
+//get the data of form (form.html) here (js file).
 
 // const http = require('http')
 // const fs = require('fs')

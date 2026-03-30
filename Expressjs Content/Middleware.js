@@ -4,7 +4,7 @@
 
 //Next() - next k mltb middleware se aage bd jaay route k upr 
 
-// eg - ek user ek website visit krna cha rha hai ab us website mei mei ye hai ki usmei phle login krna hoga tb hi age visit hogi aagr pages khulnge.ab hum middleware mei check kr lnge page load krwane se phle ki user logged in hai y nhi hai..
+// eg - ek user ek website visit krna cha rha hai ab us website mei ye hai ki usmei phle login krna hoga tb hi age visit hogi aage pages khulnge.ab hum middleware mei check kr lnge page load krwane se phle ki user logged in hai y nhi hai..
 
 
 // import express from 'express'

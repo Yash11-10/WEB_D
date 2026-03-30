@@ -88,24 +88,48 @@
 // vdo Number 42
 
 // dynamic routes
-// 👉 “Dynamic routes are routes that accept parameters and generate responses based on those parameters.” z
+// 👉 “Dynamic routes are routes that accept parameters and generate responses based on those parameters.”
 
-import express from "express";
+// import express from "express";
+// const app = express();
+// app.get("/", (req, res) => {
+//   const users = ["harsh", "yash", "raj", "shivam"];
+//   let data = "<ul>";
+//   for (let i = 0; i < users.length; i++) {
+//     data += `<li><a href="user/${users[i]}">Hey! open ${users[i]} profile</a></li>`;
+//     // console.log(users[i]);
+//   }
+//   data += "</ul>";
+//   res.send(data);
+// });
+// app.get("/user/:name", (req, res) => {
+//   console.log(req.params.name);
+//   const userName = req.params.name;
+//   const capitalName = userName.charAt(0).toUpperCase() + userName.slice(1);
+//   res.send(`This is ${capitalName}'s Profile`);
+// });
+// app.listen(3400);
+
+
+
+// vdo43
+import express from 'express';
+import userData from "./user.json" with {type:'json'}
 const app = express();
-app.get("/", (req, res) => {
-  const users = ["harsh", "yash", "raj", "shivam"];
-  let data = "<ul>";
-  for (let i = 0; i < users.length; i++) {
-    data += `<li><a href="user/${users[i]}">${users[i]}</a></li>`;
-    // console.log(users[i]);
-  }
-  data += "</ul>";
-  res.send(data);
-});
-app.get("/user/:name", (req, res) => {
-  console.log(req.params.name);
-  const userName = req.params.name;
-  const capitalName = userName.charAt(0).toUpperCase() + userName.slice(1);
-  res.send(`This is ${capitalName}'s Profile`);
-});
+app.get("",(req,res)=>{
+  console.log(userData)
+  res.send(userData);
+})
+app.get("/user/:id", (req,res)=>{
+  const id = req.params.id
+  console.log(id)
+  let filterData = userData.filter((user)=>user.id==id)
+  res.send(filterData)
+})
+app.get("/username/:name", (req,res)=>{
+  const name = req.params.name
+  console.log(name)
+  let filterData = userData.filter((user)=>user.name.toLowerCase()==name.toLowerCase())
+  res.send(filterData)
+})
 app.listen(3400);
