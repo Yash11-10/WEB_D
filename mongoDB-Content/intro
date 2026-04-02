@@ -1,0 +1,36 @@
+👉 MongoDB is a NoSQL, document-oriented database that stores data in flexible, JSON-like documents instead of traditional tables, allowing high scalability and performance.
+
+
+Flexible schema (no fixed structure)
+Handles unstructured and nested data easily
+High scalability (horizontal scaling)
+Faster development (no schema design needed)
+Good performance for large datasets
+Easy integration with modern apps (JSON format)
+
+User authentication systems (login/signup)
+E-commerce apps (products, orders, cart data)
+Social media apps (posts, comments, likes)
+Real-time applications (chat apps, notifications)
+Content management systems (blogs, articles)
+Mobile apps backend
+Big data & analytics applications
+IoT applications (sensor data storage)
+
+CRUD Operations
+→ Create, Read, Update, Delete (basic operations in MongoDB)
+Collections & Documents
+→ Collection = like a table
+→ Document = like a row (but in JSON format)
+Mongoose (Important 🔥)
+→ Used with Node.js to interact with MongoDB easily
+Indexing
+→ Improves query performance (very important in large apps)
+Aggregation Framework
+→ Used for complex queries (like filtering, grouping, analytics)
+Replication
+→ Copies data for backup and high availability
+Sharding
+→ Distributes data across multiple servers (for scaling)
+Atlas (Cloud MongoDB)
+→ You don’t need to install locally, can use MongoDB online
