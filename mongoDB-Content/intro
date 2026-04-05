@@ -34,3 +34,45 @@ Sharding
 → Distributes data across multiple servers (for scaling)
 Atlas (Cloud MongoDB)
 → You don’t need to install locally, can use MongoDB online
+
+
+// 👉 ये packages किसके हैं?
+// 🔹 1. mongodb
+// 👉 यह official package है MongoDB का
+// 👉 बनाया गया है by → MongoDB Inc.
+// 👉 मतलब:
+// Direct MongoDB database से connect करता है
+// यह “real / native driver” है
+// 🔹 2. mongoose
+// 👉 यह third-party package है (official नहीं है)
+// 👉 बनाया गया है by → Guillermo Rauch (initial creator)
+// 👉 मतलब:
+// MongoDB के ऊपर एक layer है
+// काम आसान करने के लिए बनाया गया
+
+
+
+👉 MongoDB Driver (flow) -->
+<!-- MongoClient create
+connect()
+db select
+collection select
+CRUD operations
+👉 Mongoose (flow)
+mongoose.connect()
+schema बनाओ
+model बनाओ
+CRUD करो
+
+What is CORS?
+
+👉 CORS (Cross-Origin Resource Sharing) is a security feature of browsers
+
+👉 It controls:
+
+कौन सा frontend (origin)
+किस backend (server) से data ले सकता है
+🎯 Interview Answer:
+
+👉 CORS is a browser security mechanism that restricts cross-origin requests. Without proper CORS configuration, API requests from different origins are blocked, causing errors like “Access blocked by CORS policy.”
+CORS = “कौन किस server से data ले सकता है”
