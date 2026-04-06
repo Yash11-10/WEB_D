@@ -152,22 +152,22 @@
 // 👉 Error handling middleware is a special type of middleware in Express that is used to handle errors of routes in the application.
 
 
-import express from "express";
-const app = express()
-app.get("", (req,res)=>{
-    res.send("Home Page");
-})
-app.get("/users", (req,res)=>{
-    res.send1("Users Page");
-})
-app.get("/error", (req,res)=>{
-    res.send("Error Page");
-    // forcefully error generate 
-    const error = new Error("")
-    error.status=404;
-    next(error); 
-})
-app.use((err, req, res, next)=>{
-    res.status(err.status || 500).send("Try after some time");
-})
-app.listen(3200)
+// import express from "express";
+// const app = express()
+// app.get("", (req,res)=>{
+//     res.send("Home Page");
+// })
+// app.get("/users", (req,res)=>{
+//     res.send1("Users Page");
+// })
+// app.get("/error", (req,res)=>{
+//     res.send("Error Page");
+//     // forcefully error generate 
+//     const error = new Error("")
+//     error.status=404;
+//     next(error); 
+// })
+// app.use((err, req, res, next)=>{
+//     res.status(err.status || 500).send("Try after some time");
+// })
+// app.listen(3200)

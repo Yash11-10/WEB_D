@@ -76,3 +76,29 @@ What is CORS?
 
 👉 CORS is a browser security mechanism that restricts cross-origin requests. Without proper CORS configuration, API requests from different origins are blocked, causing errors like “Access blocked by CORS policy.”
 CORS = “कौन किस server से data ले सकता है”
+
+
+
+
+
+What is MongoDB Atlas?
+👉 MongoDB Atlas is a cloud-based database service where you can use MongoDB online without installing it locally
+
+👉 Key Features of MongoDB Atlas (Line by Line)
+Cloud-based database (no local installation needed)
+Easy setup and management
+Built-in security (authentication & encryption)
+Automatic backups and restore
+Auto scaling based on data load
+High availability with replication
+Access from anywhere (global access)
+Performance monitoring tools
+Supports multiple cloud providers (AWS, Azure, GCP)
+
+
+Cookies are small data stored in the browser. Set cookie is used to store data on the client side, and get cookie is used to retrieve that data from incoming requests.
+
+Real Life Example
+👉 Instagram / Facebook जैसे apps
+Login के बाद बार-बार login नहीं करना पड़ता
+क्योंकि cookie already stored होती है

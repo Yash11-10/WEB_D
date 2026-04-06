@@ -342,7 +342,7 @@
 // });
 // app.listen(3400);
 
-// vdo 55  connect ongodb to mongoose (npm package)
+// vdo 55  connect mongodb to mongoose (npm package)
 
 // import mongoose, { mongo } from "mongoose";
 // async function dbConnection(){
@@ -476,6 +476,9 @@
 // })
 // app.listen(3400)
 
+
+
+
 // vdo 60 upload file in nodejs
 // nodejs mei file ko upload krane k liye ek package ki zrurt hoti hai uska naam hai---{multer}
 // import express from "express";
@@ -505,3 +508,137 @@
 //       })
 // })
 // app.listen(3000);
+
+
+
+
+// vdo 61 mogoDB atlas
+// vdo 62 connect nodejs to mongodb databases present on atlas
+
+// import { MongoClient} from "mongodb";
+// const url="mongodb+srv://akshatsaxena102005_db_user:akshit8279@cluster0.oy5opn6.mongodb.net/?appName=Cluster0"
+// const dbName="school"
+// const collection="student"
+// const client=new MongoClient(url)
+// client.connect().then(()=>{
+//   console.log("----connected----")
+// })
+// async function dbConnection(){
+//   const db = client.db(dbName)
+//   const collectResult = db.collection(collection); 
+//   const result = await collectResult.find().toArray()
+//   console.log(result);
+// }
+// dbConnection()
+
+
+
+// vdo 63 - set and get cookies
+
+
+// import express from "express";
+// const app = express();
+// app.use(express.urlencoded({extended:true}))
+// app.set('view engine','ejs')
+// app.get("/login",(req,res)=>{
+//   res.render('login');
+// })
+// app.post("/profile",(req,res)=>{
+//   res.setHeader('Set-Cookies','login=true')
+//   res.setHeader('Set-Cookies','name='+req.body.name)
+//   res.render('profile');
+// })
+// app.get("/",(req,res)=>{
+//   let cookiesData = req.get('cookie')
+//   cookiesData = cookiesData.split(":")
+//   cookiesData = cookiesData[1].split("=")
+//   console.log(cookiesData[1])
+//   res.render('home',{name:cookiesData[1]});
+// })
+// app.listen(3000);
+
+
+
+
+
+// vdo 64--sessions
+
+// same use of sessions but data stored on server not on client(browser).
+// sensitive data hum krte hai store 
+// session package -- npm i express-session 
+
+
+// vdo 65 send email with  nodejs
+
+// node js se mail send krne mei help krge a ye package-- npm i nodemailer
+
+
+// ye form se data kra hai fetch fir mail bheji hai 
+// import express from "express";
+// import nodemailer from 'nodemailer'
+// const app = express()
+// app.use(express.urlencoded({extended:true}))
+// const transporter = nodemailer.createTransport({
+//   service:'gmail',
+//   auth:{
+//     user:'akshatsaxena102005@gmail.com',
+//     pass:'nvyq hdng xwqo glhw'
+//   }
+// })
+// app.set('view engine','ejs')
+// app.get("/mail",(req,res)=>{
+//   res.render("mail")
+// })
+// app.post("/submit-mail",(req,res)=>{
+//   const mailOptions = {
+//     from:'akshatsaxena102005@gmail.com',
+//     to:'akshatsaxena102005@gmail.com',
+//     subject:req.body.subject,
+//     text:req.body.mail
+//   }
+//   transporter.sendMail(mailOptions,(error,info)=>{
+//     if(error){
+//       res.send("Try Again After Sometime")
+//     }
+//     else{
+//       res.send("Mail send succeccfully")
+//     }
+//   })
+//   res.send("Email send")
+// })
+// app.listen(3400);
+
+// ye api se bhejnge mail 
+import express from "express";
+import nodemailer from 'nodemailer'
+const app = express()
+app.use(express.json()) //change from above code
+const transporter = nodemailer.createTransport({
+  service:'gmail',
+  auth:{
+    user:'akshatsaxena102005@gmail.com',
+    pass:'nvyq hdng xwqo glhw'
+  }
+})
+app.set('view engine','ejs')
+app.get("/mail",(req,res)=>{
+  res.render("mail")
+})
+app.post("/submit-mail",(req,res)=>{
+  const mailOptions = {
+    from:'akshatsaxena102005@gmail.com',
+    to:'akshatsaxena102005@gmail.com',
+    subject:req.body.subject,
+    text:req.body.mail
+  }
+  transporter.sendMail(mailOptions,(error,info)=>{
+    if(error){
+      res.send("Try Again After Sometime")
+    }
+    else{
+      res.send("Mail send succeccfully")
+    }
+  })
+  res.send("Email send")
+})
+app.listen(3400);
