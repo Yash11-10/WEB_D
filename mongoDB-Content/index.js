@@ -35,6 +35,8 @@
 // })
 // app.listen(3400);
 
+
+
 // vdo 49
 // import express from "express";
 // import { MongoClient } from "mongodb";
@@ -57,6 +59,9 @@
 //     })
 // })
 // app.listen(3400);
+
+
+
 
 // vdo 50  submit form data on mongoDB (form ko jb submit krnge submit btn pe click krke tb data sara mongoDB database pe save krna sekhnge).
 
@@ -148,6 +153,8 @@
 //     })
 // })
 // app.listen(3400);
+
+
 
 // vdo 52
 // ab dlt krnge data mongodb se or ui se bhi
@@ -342,6 +349,12 @@
 // });
 // app.listen(3400);
 
+
+
+
+
+
+
 // vdo 55  connect mongodb to mongoose (npm package)
 
 // import mongoose, { mongo } from "mongoose";
@@ -358,6 +371,12 @@
 // }
 // dbConnection()
 
+
+
+
+
+
+
 // vdo 56 mongodb se data fetch kaise kr skte hai api bnakr
 
 // import mongoose from "mongoose";
@@ -373,6 +392,11 @@
 //     res.send({studentData});
 // })
 // app.listen(3400)
+
+
+
+
+
 
 // vdo 57  making post api and storing data in monogoDB.
 
@@ -407,6 +431,10 @@
 //     });
 // })
 // app.listen(3400)
+
+
+
+
 
 // vdo 58 put or dlt api kaise bna skte hai mongoose package ki vjy se
 
@@ -461,6 +489,9 @@
 //     });
 // })
 // app.listen(3400)
+
+
+
 
 // vdo 59 cors issues-browser k security feature
 // import express from "express";
@@ -609,36 +640,37 @@
 // app.listen(3400);
 
 // ye api se bhejnge mail 
-import express from "express";
-import nodemailer from 'nodemailer'
-const app = express()
-app.use(express.json()) //change from above code
-const transporter = nodemailer.createTransport({
-  service:'gmail',
-  auth:{
-    user:'akshatsaxena102005@gmail.com',
-    pass:'nvyq hdng xwqo glhw'
-  }
-})
-app.set('view engine','ejs')
-app.get("/mail",(req,res)=>{
-  res.render("mail")
-})
-app.post("/submit-mail",(req,res)=>{
-  const mailOptions = {
-    from:'akshatsaxena102005@gmail.com',
-    to:'akshatsaxena102005@gmail.com',
-    subject:req.body.subject,
-    text:req.body.mail
-  }
-  transporter.sendMail(mailOptions,(error,info)=>{
-    if(error){
-      res.send("Try Again After Sometime")
-    }
-    else{
-      res.send("Mail send succeccfully")
-    }
-  })
-  res.send("Email send")
-})
-app.listen(3400);
+
+// import express from "express";
+// import nodemailer from 'nodemailer'
+// const app = express()
+// app.use(express.json()) //change from above code
+// const transporter = nodemailer.createTransport({
+//   service:'gmail',
+//   auth:{
+//     user:'akshatsaxena102005@gmail.com',
+//     pass:'nvyq hdng xwqo glhw'
+//   }
+// })
+// app.set('view engine','ejs')
+// app.get("/mail",(req,res)=>{
+//   res.render("mail")
+// })
+// app.post("/submit-mail",(req,res)=>{
+//   const mailOptions = {
+//     from:'akshatsaxena102005@gmail.com',
+//     to:'akshatsaxena102005@gmail.com',
+//     subject:req.body.subject,
+//     text:req.body.mail
+//   }
+//   transporter.sendMail(mailOptions,(error,info)=>{
+//     if(error){
+//       res.send("Try Again After Sometime")
+//     }
+//     else{
+//       res.send("Mail send succeccfully")
+//     }
+//   })
+//   res.send("Email send")
+// })
+// app.listen(3400);

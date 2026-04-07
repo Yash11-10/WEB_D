@@ -26,7 +26,7 @@
 //             res.write('Internal Server Error');
 //             return;
 //         }
-//         res.writeHead(500, {"content-type":'text/html'})
+//         res.writeHead(200, {"content-type":'text/html'})
 //         if (req.url == '/'){
 //             res.write(data)
 //         }

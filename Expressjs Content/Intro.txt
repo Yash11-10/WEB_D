@@ -1,7 +1,5 @@
 It is a framework of node js.
-
 Express is a popular web application framework for Node.js. It simplifies building web servers and APIs by providing an easy-to-use structure for handling HTTP requests, routing, middleware, and more. Think of it as a set of tools on top of Node.js that makes building web applications much faster and cleaner.
-
 
 these are already there in this. 🔽
 features of express.🔽
