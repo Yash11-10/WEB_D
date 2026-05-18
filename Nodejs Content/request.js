@@ -1,6 +1,6 @@
 const http = require('http');
 http.createServer((req,res)=>{
-    console.log(req.method) //yhn pe ye console.log brwoser k consolelog pe nhi server k pe chlega mtlb yhin terminal pe
+    console.log(req.method) //yhn pe ye console.log brwoser k console log pe nhi server k pe chlega mtlb yhin terminal pe
     if(req.url=="/"){
         res.write("<h1>Home Page</h1>")
     }
